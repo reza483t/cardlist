@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Custom_Card extends StatelessWidget {
   final String title;
@@ -11,10 +12,10 @@ class Custom_Card extends StatelessWidget {
       height: 280,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: const Color(0xBF3E8989),
+          color: const Color(0xfF1B4332),
           boxShadow: const [
             BoxShadow(
-                color: Color(0x403E8989),
+                color: Color(0x401B4332),
                 spreadRadius: 3,
                 blurRadius: 0,
                 offset: Offset(-3, 3))
@@ -27,7 +28,11 @@ class Custom_Card extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 8),
-                child: Container(child: Text(title)),
+                child: Container(
+                    child: Text(
+                  title,
+                  style: TextStyle(color: Colors.white),
+                )),
               )
             ],
           ),

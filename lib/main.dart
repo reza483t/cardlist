@@ -36,21 +36,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: const EdgeInsets.fromLTRB(33, 25, 0, 0),
-      child: Column(
-        children: [
-          Cards_widget(),
-          const SizedBox(
-            height: 40,
-          ),
-          Status_bar_first_widget(),
-          const SizedBox(
-            height: 40,
-          ),
-          bottom_row()
-        ],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(33, 25, 0, 0),
+        child: Column(
+          children: [
+            Cards_widget(),
+            const SizedBox(
+              height: 40,
+            ),
+            Status_bar_first_widget(),
+            const SizedBox(
+              height: 40,
+            ),
+            bottom_row()
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

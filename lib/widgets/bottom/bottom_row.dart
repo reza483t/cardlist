@@ -2,20 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 import '../All/Point_Widget.dart';
+import 'custom_container.dart';
 
 class bottom_row extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (Row(
       children: [
-        Container(
-          width: 430,
-          height: 280,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25),
-            color: const Color(0xff232B2B),
-          ),
-          child: Column(
+        custom_container(
+          childContainer: Column(
             children: [
               const Padding(
                 padding: EdgeInsets.only(top: 10),
@@ -259,107 +254,99 @@ class bottom_row extends StatelessWidget {
             ],
           ),
         ),
-        // تعداد کاربرانی که انلاین هستند. 01
-        //finish
         const SizedBox(
           width: 44,
         ),
-        Container(
-            width: 430,
-            height: 280,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: const Color(0xff232B2B),
+        const custom_container(
+          childContainer:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 5, 0, 0),
+              child: Text(
+                'record',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-            child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-                    child: Text(
-                      'record',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                      child: Text(
+                    '7693',
+                    style: TextStyle(color: Colors.white),
+                  )),
+                  Text(
+                    ' تعداد کاربرانی که در 7روز گذشته از اپ دیدن کردن  ',
+                    style: TextStyle(color: Colors.white),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Expanded(
-                            child: Text(
-                          '7693',
-                          style: TextStyle(color: Colors.white),
-                        )),
-                        Text(
-                          ' تعداد کاربرانی که در 7روز گذشته از اپ دیدن کردن  ',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Point(colorpoint: Color(0xff5FE180)),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                      ],
-                    ),
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Point(colorpoint: Color(0xff5FE180)),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 5, 20, 0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                      child: Text(
+                    '7693',
+                    style: TextStyle(color: Colors.white),
+                  )),
+                  Text(
+                    'در 7 روز گذشته اضافه شدند  ',
+                    style: TextStyle(color: Colors.white),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 5, 20, 0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Expanded(
-                            child: Text(
-                          '7693',
-                          style: TextStyle(color: Colors.white),
-                        )),
-                        Text(
-                          'در 7 روز گذشته اضافه شدند  ',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Point(colorpoint: Color(0xff1F8AFF)),
-                        ),
-                      ],
-                    ),
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Point(colorpoint: Color(0xff1F8AFF)),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 5, 20, 0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                      child: Text(
+                    '7693',
+                    style: TextStyle(color: Colors.white),
+                  )),
+                  Text(
+                    'تعداد کاربرانی که در 30 روز گذشته از اپ دیدن کردن ',
+                    style: TextStyle(color: Colors.white),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 5, 20, 0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Expanded(
-                            child: Text(
-                          '7693',
-                          style: TextStyle(color: Colors.white),
-                        )),
-                        Text(
-                          'تعداد کاربرانی که در 30 روز گذشته از اپ دیدن کردن ',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Point(colorpoint: Color(0xffFF7987)),
-                        ),
-                      ],
-                    ),
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Point(colorpoint: Color(0xffFF7987)),
                   ),
-                ]))
+                ],
+              ),
+            ),
+          ]),
+        )
       ],
     ));
   }
